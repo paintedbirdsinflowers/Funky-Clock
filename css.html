@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bungee&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff69b4);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.clock-container {
+    background: rgba(255, 105, 180, 0.8);
+    border: 5px dashed #00ff00;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    transform: rotate(2deg);
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-family: 'Bungee', cursive;
+    font-size: 2.5em;
+    color: #ffff00;
+    text-shadow: 3px 3px #ff00ff;
+    margin-bottom: 20px;
+}
+
+#clock {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2em;
+    color: #00ffff;
+    background: #ff1493;
+    padding: 15px 25px;
+    border: 3px solid #00ff00;
+    border-radius: 10px;
+    display: inline-block;
+    text-shadow: 2px 2px #000;
+}
+
+.home-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 20px;
+    background: #ffff00;
+    color: #ff00ff;
+    font-family: 'Bungee', cursive;
+    font-size: 1.2em;
+    text-decoration: none;
+    border: 3px solid #00ffff;
+    border-radius: 10px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.home-button:hover {
+    background: #00ffff;
+    color: #ff1493;
+    transform: scale(1.1);
+}
+
+
+.decor {
+    position: absolute;
+    font-family: 'Bungee', cursive;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 2px 2px #ff69b4;
+    z-index: 0;
+}
+
+.decor1 { top: 10%; left: 5%; transform: rotate(-10deg); font-size: 1.5em; }
+.decor2 { bottom: 15%; right: 10%; transform: rotate(15deg); font-size: 1.2em; }
+.decor3 { top: 20%; right: 15%; transform: rotate(5deg); font-size: 1.8em; }
